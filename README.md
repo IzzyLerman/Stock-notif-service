@@ -1,3 +1,5 @@
+A microservice made for my teammate for CS361-Software Engineering I
+
 To begin, make sure node is installed, then run npm init in the home
 directory. This should install all npm dependencies. To start the API,
 you can use the command
