@@ -7,36 +7,45 @@ you can use the command
 
 
 
-Communication Contract (for CS361 Assignment 8)
+## Communication Contract (for CS361 Assignment 8)
 
 A. Use a GET, POST, or DELETE request to interact with the stock watchlist
 or to get price updates or summaries from the API. 
-GET Endpoints:
+# GET Endpoints:
 '/stocks': List of stocks in the watchlist
+
 ex.
-import requests
-response = requests.get("http://localhost:6465/stocks")
+
+`import requests`
+
+`response = requests.get("http://localhost:6465/stocks")`
 
 '/stocks/:symbol': Get price updates on stock with symbol 'symbol'
+
 '/summary': Get a summary of all stocks on the watchlist
 
-POST Endpoints:
+# POST Endpoints:
 '/stocks/:symbol': Add a stock to the watchlist with symbol 'symbol'
+
 '/clearall': Clear the watchlist
 
-DELETE Endpoint:
+# DELETE Endpoint:
 '/stocks/:symbol": Delete stock with symbol 'symbol' from the watchlist
 
 B. When receiving data with the 'requests' module in python, a JSON will
 be in the 'content' field of the response.
 
-ex. 
-import requests
-response = requests.get("http://localhost:6465/summary")
-print(response.content)
-#This will print:
+ex.
 
-{
+`import requests`
+
+`response = requests.get("http://localhost:6465/summary")`
+
+`print(response.content)`
+
+This will print:
+
+`{
 "status":200,
 "message":"Success",
 "stocks":[{
@@ -54,6 +63,6 @@ print(response.content)
   "change":"2.1600",
   "change percent":"1.0380%"
   }]
-}
+}`
 
 ![uml](https://github.com/user-attachments/assets/29b209ac-df55-4928-b4f5-948760dcf0aa)
